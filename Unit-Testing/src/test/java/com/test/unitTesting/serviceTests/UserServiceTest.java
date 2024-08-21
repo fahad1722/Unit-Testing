@@ -93,6 +93,10 @@ class UserServiceTest {
 	@Test
 	void testDeleteUser() {
 		Long userId = 1L;
+
+		// Simulate the scenario where the user exists
+		when(userRepository.existsById(userId)).thenReturn(true);
+
 		doNothing().when(userRepository).deleteById(userId);
 
 		userService.deleteUser(userId);
