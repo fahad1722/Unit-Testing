@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.test.entity.User;
+import com.test.exceptions.UserNotFoundException;
 import com.test.repository.UserRepository;
 
 @Service
@@ -28,6 +29,9 @@ public class UserService {
 	}
 
 	public void deleteUser(Long id) {
+		if (!userRepository.existsById(id)) {
+			throw new UserNotFoundException("User not found with id: " + id);
+		}
 		userRepository.deleteById(id);
 	}
 }
