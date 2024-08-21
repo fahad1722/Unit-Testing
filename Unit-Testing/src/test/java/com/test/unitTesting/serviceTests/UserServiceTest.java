@@ -21,7 +21,7 @@ import com.test.entity.User;
 import com.test.repository.UserRepository;
 import com.test.service.UserService;
 
-//@ExtendWith(MockitoExtension.class): Replaces MockitoAnnotations.openMocks(this) for initializing mocks.
+//@ExtendWith(MockitoExtension.class):::: Replaces MockitoAnnotations.openMocks(this) for initializing mocks.
 class UserServiceTest {
 
 	@Mock
