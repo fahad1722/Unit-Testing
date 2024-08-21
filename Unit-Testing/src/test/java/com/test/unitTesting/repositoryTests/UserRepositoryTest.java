@@ -36,7 +36,7 @@ public class UserRepositoryTest {
 	@Test
 	void testFindUserById() {
 
-		User user = new User(null, "Fahad", "fahad@gmail.com", "password");
+		User user = new User(null, "Fahad", "fahad@gmail.com", "password1");
 		userRepository.save(user);
 		Optional<User> savedUser = userRepository.findById(user.getId());
 
