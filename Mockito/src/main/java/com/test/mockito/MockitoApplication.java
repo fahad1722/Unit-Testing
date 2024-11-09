@@ -1,14 +1,13 @@
-package com.test;
+package com.test.mockito;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages= "com.test")
-
-public class TestingApplication {
+@SpringBootApplication
+public class MockitoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TestingApplication.class, args);
+		SpringApplication.run(MockitoApplication.class, args);
 	}
 
 }
